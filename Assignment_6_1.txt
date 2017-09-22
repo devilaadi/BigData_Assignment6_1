@@ -1,0 +1,20 @@
+
+CREATE DATABASE custom ;
+
+Show Databases;
+
+use custom;
+
+
+CREATE TABLE temperature_data (
+Date string ,
+ZipCode int,
+Temperature int)
+ROW FORMAT DELIMITED FIELDS TERMINATED BY ','
+STORED AS TEXTFILE;
+
+LOAD DATA LOCAL INPATH '/home/cloudera/Desktop/Acadgild/Hive/Assignment_6_1/dataset.txt' INTO TABLE temperature_data ;
+
+
+Select * from temperature_data ; 
+
